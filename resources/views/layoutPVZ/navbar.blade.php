@@ -1,4 +1,4 @@
-<div class="menu">
+<nav class="navbar navbar-default">
 
 <div class="container-fluid">
     <div class="navbar-header">
@@ -11,5 +11,4 @@
       <li><a href="#">Page 3</a></li>
     </ul>
   </div>
-
-</div>
+</nav>
