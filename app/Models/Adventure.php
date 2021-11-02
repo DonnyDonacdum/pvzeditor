@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Adventure extends Model
 {
     use HasFactory;
-    
+    public static function allData(){
+        return self::$Adventure;
+    } 
 }
