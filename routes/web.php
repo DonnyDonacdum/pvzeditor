@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('Main');
 });
 
-Route::resource('/project',Adventure::class);
+Route::resource('/Adventure',Adventure::class);
