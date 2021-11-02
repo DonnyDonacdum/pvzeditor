@@ -13,7 +13,7 @@ class Adventure extends Controller
      */
     public function index()
     {
-        $adventure = Adventures::all();
+        $adventure = Adventure::all();
         return view('ALevel',compact('adventure'));
     }
 
@@ -35,7 +35,7 @@ class Adventure extends Controller
      */
     public function store(Request $request)
     {
-        Adventures::create([
+        Adventure::create([
             'level' => $request->lecel,
             'description' => $request->descrip,
             'gimmick' => $request->gim,
@@ -54,7 +54,7 @@ class Adventure extends Controller
      */
     public function show($id)
     {
-        $project = Project::where('level',$id)->first();
+        $adventure = Adventure::where('level',$id)->first();
         return view('Level',compact('adventure'));
     }
 
@@ -79,7 +79,7 @@ class Adventure extends Controller
      */
     public function update(Request $request, $id)
     {
-        $adventure = Adventures::findOrFail($id);
+        $adventure = Adventure::findOrFail($id);
 
         $adventure->update([
             'level' => $request->lecel,
@@ -100,7 +100,7 @@ class Adventure extends Controller
      */
     public function destroy($id)
     {
-        $adventure = Adventures::findOrFail($id);
+        $adventure = Adventure::findOrFail($id);
         $adventure->delete();
         return redirect(route('adventure.index'));
     }
