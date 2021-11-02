@@ -11,7 +11,7 @@
     </div>
     <table class="table table-success table-stripped">
     <tr>
-        <th>No</th>
+        <th>Number</th>
         <th>Level</th>
         <th>Background</th>
         <th>Gimmick</th>
