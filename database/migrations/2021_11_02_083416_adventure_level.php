@@ -13,7 +13,16 @@ class AdventureLevel extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('adventure', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->String('level');
+            $table->String('bakcground');
+            $table->String('gimmick');
+            $table->integer('flag');
+            $table->integer('wave');
+            $table->text('description');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class AdventureLevel extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('adventure');
     }
 }
