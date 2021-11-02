@@ -35,7 +35,15 @@ class Adventure extends Controller
      */
     public function store(Request $req)
     {
-        //
+        Adventures::create([
+            'level' => $request->lecel,
+            'description' => $request->descrip,
+            'gimmick' => $request->gim,
+            'background' => $request->back,
+            'flag' => $request->fleg,
+            'wave' => $request->wave
+        ]);
+        return redirect(route('adventure.index'));
     }
 
     /**
@@ -70,7 +78,17 @@ class Adventure extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Adventures::findOrFail($id);
+
+        $project->update([
+            'level' => $request->lecel,
+            'description' => $request->descrip,
+            'gimmick' => $request->gim,
+            'background' => $request->back,
+            'flag' => $request->fleg,
+            'wave' => $request->wave
+        ]);
+        return redirect(route('project.index'));
     }
 
     /**
