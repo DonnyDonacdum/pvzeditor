@@ -1,6 +1,6 @@
 @include('layoutPVZ.navbar')
    @extends('layoutPVZ.mainlayout')
-   @section('Title',"Plants vs Zombie")
+   @section('Title',"Create a Level")
    @section('List')
    <form action="/action_page.php" method="post">
   <label for="fname">Level:</label><br>

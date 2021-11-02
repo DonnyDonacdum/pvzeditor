@@ -24,7 +24,7 @@ class Adventure extends Controller
      */
     public function create()
     {
-        //
+        return view('CreateLevel');
     }
 
     /**
@@ -33,7 +33,7 @@ class Adventure extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
         //
     }
@@ -46,7 +46,8 @@ class Adventure extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::where('level',$id)->first();
+        return view('Level',compact('adventure'));
     }
 
     /**
