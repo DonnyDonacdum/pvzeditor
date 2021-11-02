@@ -20,6 +20,9 @@
         <td>{{$huh++}}</td>
         <td>{{$level['level']}}</td>
         <td>{{$level['background']}}</td>
+        <td>{{$level['gimmick']}}</td>
+        <td>{{$level['flag']}}</td>
+        <td>{{$level['wave']}}</td>
     </tr>
     @endforeach
     </table>
