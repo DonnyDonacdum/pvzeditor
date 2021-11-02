@@ -33,7 +33,7 @@ class Adventure extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $req)
+    public function store(Request $request)
     {
         Adventures::create([
             'level' => $request->lecel,
@@ -100,6 +100,8 @@ class Adventure extends Controller
      */
     public function destroy($id)
     {
-        //
+        $adventure = Adventures::findOrFail($id);
+        $adventure->delete();
+        return redirect(route('adventure.index'));
     }
 }
