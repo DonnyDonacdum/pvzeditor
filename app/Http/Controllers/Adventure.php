@@ -66,7 +66,8 @@ class Adventure extends Controller
      */
     public function edit($id)
     {
-        //
+        $adventure = Adventure::findOrFail($id);
+        return view('EditLevel',compact('adventure'));
     }
 
     /**
@@ -78,9 +79,9 @@ class Adventure extends Controller
      */
     public function update(Request $request, $id)
     {
-        $project = Adventures::findOrFail($id);
+        $adventure = Adventures::findOrFail($id);
 
-        $project->update([
+        $adventure->update([
             'level' => $request->lecel,
             'description' => $request->descrip,
             'gimmick' => $request->gim,
@@ -88,7 +89,7 @@ class Adventure extends Controller
             'flag' => $request->fleg,
             'wave' => $request->wave
         ]);
-        return redirect(route('project.index'));
+        return redirect(route('adventure.index'));
     }
 
     /**
