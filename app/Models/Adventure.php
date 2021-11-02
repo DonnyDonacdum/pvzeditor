@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Adventure extends Model
 {
     use HasFactory;
+    
 }
