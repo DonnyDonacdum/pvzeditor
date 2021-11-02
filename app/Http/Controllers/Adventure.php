@@ -13,7 +13,8 @@ class Adventure extends Controller
      */
     public function index()
     {
-        //
+        $adventure = Adventures::all();
+        return view('ALevel',compact('adventure'));
     }
 
     /**
