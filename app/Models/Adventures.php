@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Adventure extends Model
 {
     use HasFactory;
-    protected $table = 'project';
+    protected $table = 'adventure';
     public static function allData(){
         return self::$adventure;
     } 
