@@ -18,7 +18,8 @@
     @foreach($adventure as $level)
     <tr>
         <td>{{$huh++}}</td>
-        <td>{{}}</td>
+        <td>{{$level['level']}}</td>
+        <td>{{$level['background']}}</td>
     </tr>
     @endforeach
     </table>

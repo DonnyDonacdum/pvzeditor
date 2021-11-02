@@ -16,7 +16,7 @@ class AdventureLevel extends Migration
         Schema::create('adventure', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->String('level');
-            $table->String('bakcground');
+            $table->String('background');
             $table->String('gimmick');
             $table->integer('flag');
             $table->integer('wave');
