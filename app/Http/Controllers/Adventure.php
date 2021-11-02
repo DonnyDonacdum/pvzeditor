@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Adventures;
 use Illuminate\Http\Request;
 
 class Adventure extends Controller

@@ -4,8 +4,12 @@
    @section('List')
     <div>
         <h1>Adventure level List</h1>
+    </div class="text-left">
+    <a href="{{route('project.create')}}"> Create Project</a>
+    <div>
+
     </div>
-    <table>
+    <table class="table table-success table-stripped">
     <tr>
         <th>No</th>
         <th>Level</th>
@@ -13,6 +17,7 @@
         <th>Gimmick</th>
         <th>Flags</th>
         <th>Wave counts</th>
+        <th>Manage</th>
     </tr>
     @php ($huh=0)
     @foreach($adventure as $level)
