@@ -10,7 +10,7 @@ class Adventure extends Model
     use HasFactory;
     protected $table = 'adventure';
     protected $fillable = ['level','background','gimmick','flag','wave','description'];
-    public static function all(){
+    public static function allData(){
         return self::$adventure;
     } 
 }
