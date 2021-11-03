@@ -23,7 +23,9 @@
     @foreach($adventure as $level)
     <tr>
         <td>{{$huh++}}</td>
-        <td>{{$level['level']}}</td>
+        <td><a href="Adventure/{{$level['level']}}"> 
+{{ $pro['level'] }}
+</a></td>
         <td>{{$level['background']}}</td>
         <td>{{$level['gimmick']}}</td>
         <td>{{$level['flag']}}</td>
