@@ -2,7 +2,8 @@
    @extends('layoutPVZ.mainlayout')
    @section('Title',"Create a Level")
    @section('List')
-   <form action="/action_page.php" method="post">
+   <form action="{{route('Adventure.store')}}" method="post">
+      @csrf
   <label for="fname">Level:</label><br>
   <input type="text" id="fname" name="lecel" required><br>
   <label for="lname">Background:</label><br>

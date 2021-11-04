@@ -2,7 +2,7 @@
    @extends('layoutPVZ.mainlayout')
    @section('Title',"Edit a Level")
    @section('List')
-   <form action="/action_page.php" method="post">
+   <form action="{{route('Adventure.update')}}" method="post">
   <label for="fname">Level:</label><br>
   <input type="text" id="fname" name="lecel" required><br>
   <label for="lname">Background:</label><br>

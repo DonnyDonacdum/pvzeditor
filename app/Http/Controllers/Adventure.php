@@ -1,7 +1,7 @@
 <?php
-
+namespace App\Models;
 namespace App\Http\Controllers;
-use App\Models\Adventures;
+use App\models\Adventures;
 use Illuminate\Http\Request;
 
 class Adventure extends Controller
@@ -43,7 +43,7 @@ class Adventure extends Controller
             'flag' => $request->fleg,
             'wave' => $request->wave
         ]);
-        return redirect(route('adventure.index'));
+        return redirect(route('Adventure.index'));
     }
 
     /**
@@ -89,7 +89,7 @@ class Adventure extends Controller
             'flag' => $request->fleg,
             'wave' => $request->wave
         ]);
-        return redirect(route('adventure.index'));
+        return redirect(route('Adventure.index'));
     }
 
     /**
@@ -102,6 +102,6 @@ class Adventure extends Controller
     {
         $adventure = Adventures::findOrFail($id);
         $adventure->delete();
-        return redirect(route('adventure.index'));
+        return redirect(route('Adventure.index'));
     }
 }
