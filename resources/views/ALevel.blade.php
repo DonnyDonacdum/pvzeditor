@@ -22,7 +22,7 @@
     @php ($huh=0)
     @foreach($adventure as $level)
     <tr>
-        <td>{{$huh++}}</td>
+        <td>{{$huh+1}}</td>
         <td><a href="Adventure/{{$level['level']}}"> 
 {{ $level['level'] }}
 </a></td>
@@ -31,7 +31,7 @@
         <td>{{$level['flag']}}</td>
         <td>{{$level['wave']}}</td>
         <td>
-            <a  href="{{route('Adventure.show',$level->id)}}">show</a>
+            <a  href="Adventure/{{$level['level']}}">show</a>
             <a  href="{{route('Adventure.edit',$level->id)}}">edit</a>
             <form action="{{route('Adventure.destroy',$level->id)}}" method="POST">
                 @csrf
