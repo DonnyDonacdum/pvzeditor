@@ -13,7 +13,7 @@ class Zombielist extends Migration
      */
     public function up()
     {
-        Schema::create('spec', function (Blueprint $table) {
+        Schema::create('zombielist', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->String('name');
             $table->String('armortype');
@@ -31,6 +31,6 @@ class Zombielist extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spec');
+        Schema::dropIfExists('zombielist');
     }
 }

@@ -1,6 +1,6 @@
 @include('layoutPVZ.navbar')
    @extends('layoutPVZ.mainlayout')
-   @section('Title',"Adventure Level List")
+   @section('Title',"Zombie List")
    @section('List')
     <div>
         <h1>Zombie List</h1>
@@ -23,7 +23,7 @@
     @foreach($zombies as $bie)
     <tr>
         <td>{{$wut+1}}</td>
-        <td><a href="Adventure/{{$level['level']}}"> 
+        <td><a href="Zombie/{{$bie['level']}}"> 
 {{ $bie['level'] }}
 </a></td>
         <td>{{$bie['background']}}</td>
@@ -31,7 +31,7 @@
         <td>{{$bie['flag']}}</td>
         <td>{{$bie['wave']}}</td>
         <td>
-            <a  href="Zombie/{{$level['level']}}">show</a>
+            <a  href="Zombie/{{$bie['level']}}">show</a>
             <a  href="{{route('Adventure.edit',$level->id)}}">edit</a>
             <form action="{{route('Adventure.destroy',$level->id)}}" method="POST">
                 @csrf
