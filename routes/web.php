@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/Adventure',Adventure::class);
+Route::resource('/Zombie',Zombie::class);
