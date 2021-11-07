@@ -2,7 +2,9 @@
    @extends('layoutPVZ.mainlayout')
    @section('Title',"Edit a Level")
    @section('List')
-   <form action="{{route('Adventure.update',$adventure->id)}}" method="Put">
+   <form action="{{route('Adventure.update',$adventure->id)}}" method="Post">
+      @csrf
+      <input type="hidden" name="_menthod" value="PATCH">
   <label for="fname">Level:</label><br>
   <input type="text" id="fname" name="lecel"><br>
   <label for="lname">Background:</label><br>

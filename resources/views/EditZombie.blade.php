@@ -2,7 +2,8 @@
    @extends('layoutPVZ.mainlayout')
    @section('Title',"Edit a Zombie")
    @section('List')
-   <form action="{{route('Zombie.update',$zombies->id)}}" method="Put">
+   <form action="{{route('Zombie.update',$zombies->id)}}" method="Post">
+   <input type="hidden" name="_menthod" value="PATCH">
    <label for="fname">Zombie name:</label><br>
   <input type="text" id="fname" name="name" ><br>
   <label for="lname">Armor:</label><br>
