@@ -14,7 +14,10 @@ class Levelmaker extends Migration
     public function up()
     {
         Schema::table('adventures', function (Blueprint $table) {
-            
+            $table->foreign('level')
+            ->reference('name')->on('s')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
         });
     }
 
