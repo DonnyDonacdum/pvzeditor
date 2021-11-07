@@ -14,9 +14,8 @@
         <th>No</th>
         <th>Name</th>
         <th>ArmorType</th>
-        <th>Gimmick</th>
-        <th>Flags</th>
-        <th>Wave counts</th>
+        <th>Abilities</th>
+        <th>Speeds</th>
         <th>Manage</th>
     </tr>
     @php ($wut=0)
@@ -26,10 +25,9 @@
         <td><a href="Zombie/{{$bie['Artibut']}}"> 
 {{ $bie['name'] }}
 </a></td>
-        <td>{{$bie['background']}}</td>
-        <td>{{$bie['gimmick']}}</td>
-        <td>{{$bie['flag']}}</td>
-        <td>{{$bie['wave']}}</td>
+        <td>{{$bie['armortype']}}</td>
+        <td>{{$bie['special']}}</td>
+        <td>{{$bie['speed']}}</td>
         <td>
             <a  href="Zombie/{{$bie['Artibut']}}">show</a>
             <a  href="{{route('Zombie.edit',$bie->id)}}">edit</a>
