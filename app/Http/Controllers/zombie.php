@@ -14,7 +14,7 @@ class zombie extends Controller
     public function index()
     {
         $zombies = Zambie::all();
-        return view('Zombie',compact('zombielist'));
+        return view('Zombie',compact('s'));
     }
 
     /**
@@ -64,8 +64,8 @@ class zombie extends Controller
      */
     public function edit($id)
     {
-        $zombies = Zombie::findOrFail($id);
-        return view('EditZombie',compact('zombielist'));
+        $zombies = Zambie::findOrFail($id);
+        return view('EditZombie',compact('s'));
     }
 
     /**
@@ -77,7 +77,7 @@ class zombie extends Controller
      */
     public function update(Request $request, $id)
     {
-        $zombies = Adventures::findOrFail($id);
+        $zombies = Zambie::findOrFail($id);
 
         $zombies->update([
             'name' => $request->name,
@@ -97,7 +97,7 @@ class zombie extends Controller
      */
     public function destroy($id)
     {
-        $zombies = Adventures::findOrFail($id);
+        $zombies = Zambie::findOrFail($id);
         $zombies->delete();
         return redirect(route('zombie.index'));
     }
