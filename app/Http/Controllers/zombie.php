@@ -1,7 +1,7 @@
 <?php
-
+namespace App\Models;
 namespace App\Http\Controllers;
-
+use App\models\zambie;
 use Illuminate\Http\Request;
 
 class zombie extends Controller
@@ -13,7 +13,8 @@ class zombie extends Controller
      */
     public function index()
     {
-        //
+        $adventure = Zambie::all();
+        return view('Zombie',compact('zombielist'));
     }
 
     /**
@@ -23,7 +24,7 @@ class zombie extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
