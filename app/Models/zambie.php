@@ -9,7 +9,6 @@ class zambie extends Model
 {
     use HasFactory;
     protected $table = 's';
-    protected $primaryKey = 'name';
     protected $keyType = 'string';
     protected $fillable = ['name','armortype','special','speed','descrip'];
     public static function allData(){
