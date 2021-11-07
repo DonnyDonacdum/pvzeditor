@@ -24,7 +24,7 @@ class zombie extends Controller
      */
     public function create()
     {
-        
+        return view('CreateZombie');
     }
 
     /**
@@ -35,7 +35,14 @@ class zombie extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Zambie::create([
+            'name' => $request->name,
+            'descrip' => $request->descript,
+            'special' => $request->special,
+            'armortype' => $request->armor,
+            'speed' => $request->sped
+        ]);
+        return redirect(route('zombie.index'));
     }
 
     /**
