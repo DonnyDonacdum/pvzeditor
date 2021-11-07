@@ -42,7 +42,7 @@ class zombie extends Controller
             'armortype' => $request->armor,
             'speed' => $request->sped
         ]);
-        return redirect(route('zombie.index'));
+        return redirect(route('Zombie.index'));
     }
 
     /**
@@ -86,7 +86,7 @@ class zombie extends Controller
             'armortype' => $request->armor,
             'speed' => $request->sped
         ]);
-        return redirect(route('zombie.index'));
+        return redirect(route('Zombie.index'));
     }
 
     /**
@@ -99,6 +99,6 @@ class zombie extends Controller
     {
         $zombies = Zambie::findOrFail($id);
         $zombies->delete();
-        return redirect(route('zombie.index'));
+        return redirect(route('Zombie.index'));
     }
 }
