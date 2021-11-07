@@ -80,12 +80,11 @@ class zombie extends Controller
         $zombies = Adventures::findOrFail($id);
 
         $zombies->update([
-            'level' => $request->lecel,
-            'description' => $request->descrip,
-            'gimmick' => $request->gim,
-            'background' => $request->back,
-            'flag' => $request->fleg,
-            'wave' => $request->wave
+            'name' => $request->name,
+            'descrip' => $request->descript,
+            'special' => $request->special,
+            'armortype' => $request->armor,
+            'speed' => $request->sped
         ]);
         return redirect(route('zombie.index'));
     }
