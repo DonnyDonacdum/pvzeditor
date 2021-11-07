@@ -9,5 +9,5 @@ class zambie extends Model
 {
     use HasFactory;
     protected $table = 'zombielist';
-    protected $fillable = ['level','background','gimmick','flag','wave','description'];
+    protected $fillable = ['name','armortype','special','speed','descrip'];
 }
