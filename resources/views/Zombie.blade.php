@@ -32,8 +32,8 @@
         <td>{{$bie['wave']}}</td>
         <td>
             <a  href="Zombie/{{$bie['level']}}">show</a>
-            <a  href="{{route('Adventure.edit',$level->id)}}">edit</a>
-            <form action="{{route('Adventure.destroy',$level->id)}}" method="POST">
+            <a  href="{{route('Zombie.edit',$level->id)}}">edit</a>
+            <form action="{{route('Zombie.destroy',$level->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete</button>
