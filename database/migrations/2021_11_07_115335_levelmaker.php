@@ -29,7 +29,6 @@ class Levelmaker extends Migration
     public function down()
     {
         Schema::table('adventure', function (Blueprint $table) {
-            //
         });
     }
 }
