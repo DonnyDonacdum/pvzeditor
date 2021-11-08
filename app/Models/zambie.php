@@ -11,7 +11,5 @@ class zambie extends Model
     protected $table = 's';
     protected $keyType = 'string';
     protected $fillable = ['name','armortype','special','speed','descrip'];
-    public static function allData(){
-        return self::$zombie;
-    } 
+
 }

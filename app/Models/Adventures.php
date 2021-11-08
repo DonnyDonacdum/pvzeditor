@@ -12,7 +12,4 @@ class Adventures extends Model
     protected $primaryKey = 'level';
     protected $keyType = 'string';
     protected $fillable = ['level','background','gimmick','flag','wave','description'];
-    public static function allData(){
-        return self::$adventure;
-    } 
 }
