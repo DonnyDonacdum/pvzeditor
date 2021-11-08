@@ -102,6 +102,6 @@ class Adventure extends Controller
     {
         $adventure = Adventures::findOrFail($id);
         $adventure->delete();
-        return redirect(route('Adventure.index'));
+        return redirect(route('adventure.index'));
     }
 }
