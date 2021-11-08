@@ -31,8 +31,8 @@
         <td>{{$level['flag']}}</td>
         <td>{{$level['wave']}}</td>
         <td>
-            <a  href="Adventure/{{$level['level']}}">show</a>
-            <a  href="{{route('Adventure.edit',$level->id)}}">edit</a>
+            <a  href="Adventure/{{$level['level']}}" class="btn btn-warning">show</a>
+            <a  href="{{route('Adventure.edit',$level->id)}}" class="btn btn-primary">edit</a>
             <form action="{{route('Adventure.destroy',$level->id)}}" method="POST">
                 @csrf
                 @method('DELETE')

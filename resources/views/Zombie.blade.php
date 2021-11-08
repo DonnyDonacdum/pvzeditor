@@ -29,8 +29,8 @@
         <td>{{$bie['special']}}</td>
         <td>{{$bie['speed']}}</td>
         <td>
-            <a  href="Zombie/{{$bie['Artibut']}}">show</a>
-            <a  href="{{route('Zombie.edit',$bie->id)}}">edit</a>
+            <a  href="{{route('Zombie.show',$bie->id)}}" class="btn btn-warning">show</a>
+            <a  href="{{route('Zombie.edit',$bie->id)}}" class="btn btn-primary">edit</a>
             <form action="{{route('Zombie.destroy',$bie->id)}}" method="POST">
                 @csrf
                 @method('DELETE')

@@ -53,7 +53,8 @@ class zombie extends Controller
      */
     public function show($id)
     {
-        //
+        $zombies = Zambie::where('name',$id)->first();
+        return view('Artibut',compact('zombies'));
     }
 
     /**
